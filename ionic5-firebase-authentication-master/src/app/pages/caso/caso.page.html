@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title position="center">Caso</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cliente" text="atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-avatar class="ion-margin-start" class="item-avatar">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/550/731/non_2x/user-icon-vector.jpg">
+          </ion-avatar>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-label>
+            <br><br>
+            Chavez Soria
+          </ion-label>
+          <ion-label>
+            <br><br>
+            <h2>Diego</h2>
+          </ion-label>          
+        </div>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+
+  <ion-list>
+    <ion-item-group class="ion-padding">
+      <ion-item>
+        <ion-label class="titulos">
+          Datos de Caso:
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label >Area: Familiar</ion-label>
+      </ion-item>
+      <ion-item  lines="none">
+        <ion-label>Tipo: Divorcio</ion-label>
+      </ion-item>
+    
+    </ion-item-group>
+  </ion-list>
+  <ion-item>
+    <ion-label class="titulos">
+      Estado del caso
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="primary" slot="start"></ion-checkbox>
+    <ion-label>Proceso 1</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="primary" slot="start"></ion-checkbox>
+    <ion-label>Proceso 2</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="primary" slot="start"></ion-checkbox>
+    <ion-label>Proceso 3</ion-label>
+  </ion-item>
+  <section class="full-width">
+    <header></header>
+    <ion-button expand="full" color="secondary">Actualizar estado del  caso</ion-button>
+  </section>
+
+</ion-content>

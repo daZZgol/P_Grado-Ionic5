@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title position="center">Expediente</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/expedientes" text="atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br>
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-avatar class="ion-margin-start" class="item-avatar">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/550/731/non_2x/user-icon-vector.jpg">
+          </ion-avatar>
+        </div>
+      </ion-col>
+      <ion-col >
+        <div>          
+          <ion-label >
+            <br><br>
+            {{expediente.apellidos}}
+          </ion-label>
+          
+          <ion-label>
+            <br><br>
+            <h2>{{expediente.nombres}}</h2>
+          </ion-label>          
+        </div>
+      </ion-col>
+    </ion-row> 
+    <ion-label class="ion-padding">
+      Cedula de Identidad: {{expediente.ci}}
+    </ion-label>
+    <br><br>
+    <ion-label class="ion-padding">
+      Nro. de Celular: {{expediente.numero}} 
+    </ion-label>
+    <br><br><br><br><br>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-label class="ion-padding" position="stacked">
+            Casos
+          </ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button  routerLink="/nuevocaso/{{expedienteID}} ">Crear caso</ion-button>
+        </div>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+  <ion-list class="ion-padding" *ngFor="let c of caso">
+    <ion-item>
+      <ion-label routerLink="/caso">
+        {{c.tipo}}
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

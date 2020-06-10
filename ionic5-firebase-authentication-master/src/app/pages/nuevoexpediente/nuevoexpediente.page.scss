@@ -1,0 +1,11 @@
+.titulos{
+    text-align: center;
+    font-weight: bold;
+}
+.inputs-list {
+    .input-item {
+      --padding-start: 0px;
+      --padding-end: 0px;
+      --inner-padding-end: 0px;
+    }
+  }

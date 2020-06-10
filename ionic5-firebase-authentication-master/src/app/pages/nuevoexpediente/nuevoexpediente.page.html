@@ -1,0 +1,40 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nuevo</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/expedientes" text="atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <h4 class="titulos">Crear nuevo Expediente</h4>
+  <br><br>
+  <ion-list class="inputs-list" >
+    <ion-item  lines="full" > 
+      <ion-label position="floating" >Apellidos</ion-label>
+      <ion-input required type="text" [(ngModel)]="expediente.apellidos"></ion-input>
+    </ion-item>
+    <br><br>
+    <ion-item  lines="full" > 
+      <ion-label position="floating">Nombres</ion-label>
+      <ion-input required type="text" [(ngModel)]="expediente.nombres"></ion-input>
+    </ion-item>
+    <br><br>
+    <ion-item  lines="full" > 
+      <ion-label position="floating">Cedula de Identidad</ion-label>
+      <ion-input required type="text" [(ngModel)]="expediente.ci"></ion-input>
+    </ion-item>
+    <br><br>
+    <ion-item  lines="full" > 
+      <ion-label position="floating">Nro. de Celular</ion-label>
+      <ion-input required type="number" [(ngModel)]="expediente.numero"></ion-input>
+    </ion-item>
+    <br><br>
+  </ion-list>
+  <div class="ion-padding">
+    <ion-button expand="block" type="submit" class="ion-no-margin" (click)="insertar()">Crear</ion-button>
+  </div>
+</ion-content>

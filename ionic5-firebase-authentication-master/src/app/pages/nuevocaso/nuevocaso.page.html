@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Caso</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cliente/{{expedienteID}}" text="atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+  <br>
+  <h4 class="titulos">Ingresar los datos del caso</h4>
+  <br><br>
+  <ion-list class="inputs-list">
+    <ion-item>
+      <ion-label>Area </ion-label>
+      <ion-select interface="popover" [(ngModel)]="caso.area">
+        <ion-select-option >Familiar</ion-select-option>       
+
+      </ion-select>
+    </ion-item>
+    <br><br>
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select interface="popover" [(ngModel)]="caso.tipo">
+        <ion-select-option >Divorcio</ion-select-option>
+        <ion-select-option >Manutencion</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+    <br><br>
+  </ion-list>
+  <div class="ion-padding">
+    <ion-button expand="block" type="submit" class="ion-no-margin" (click)="insertar()">Crear</ion-button>
+  </div>
+</ion-content>
+
