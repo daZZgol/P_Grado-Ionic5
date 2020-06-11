@@ -3,6 +3,12 @@
     <ion-title position="center">Expediente</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/expedientes" text="atras"></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -55,10 +61,10 @@
       </ion-col>
     </ion-row> 
   </ion-grid>
-  <ion-list class="ion-padding" *ngFor="let c of caso">
+  <ion-list class="ion-padding" *ngFor="let c of caso" [routerLink]="['/caso', c.idaux]">
     <ion-item>
-      <ion-label routerLink="/caso">
-        {{c.tipo}}
+      <ion-label >
+        {{c.tipo}} 
       </ion-label>
     </ion-item>
     

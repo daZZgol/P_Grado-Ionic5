@@ -46,15 +46,13 @@ export class ClientePage implements OnInit {
     this.expedienteID = this.route.snapshot.params['id'];
     //console.log('id aqui en cliente', this.expedienteID);
     
+    
     this.casoService.consultaCaso(this.expedienteID).subscribe( ref => {
       this.caso = ref;
+      console.log(this.caso);
     })
-    /*.subscribe(res => {
-      
-      this.caso = res 
-    
-    })*/
 
+    //console.log("Los casos: ", this.caso)
     if(this.expedienteID){
       this.loadExpediente();
     }
@@ -73,9 +71,9 @@ export class ClientePage implements OnInit {
     this.expService.getExpediente(this.expedienteID).subscribe(res => {
       loading.dismiss();
       this.expediente = res;
-      console.log(this.expediente);
+      console.log("Con datos",this.expediente);
     })
-    
+    //console.log("Sin datos:",this.expediente)
   }
 
   //exp = this.expedienteID;

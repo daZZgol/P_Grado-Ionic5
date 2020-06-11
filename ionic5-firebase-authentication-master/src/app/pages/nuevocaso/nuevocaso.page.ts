@@ -31,7 +31,9 @@ export class NuevocasoPage implements OnInit {
     tipo: '',
     apellidos: '',
     nombres: '',
-    idexpediente: ''
+    idexpediente: '',
+    ci: '',
+    idaux: ''
   }
 
   constructor( 
@@ -73,8 +75,12 @@ export class NuevocasoPage implements OnInit {
   }
   insertar(){
     //console.log("los datos del caso:", this.caso);
+    let r = Math.random().toString(36).substring(7);
+    //console.log("random", r);
     this.caso.apellidos = this.expediente.apellidos;
     this.caso.nombres = this.expediente.nombres;
+    this.caso.ci = this.expediente.ci;
+    this.caso.idaux = r;
     const estesieselid = this.expedienteID.replace(/\s*$/,"");
     this.caso.idexpediente = estesieselid;
     console.log("Los datos completos:", this.caso)

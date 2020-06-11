@@ -51,7 +51,11 @@ export class CasoService {
 
   consultaCaso (id: string ): Observable<any> {    
     //console.log("el id del exp: ", id)
-    return this.db.collection('/casos', ref => ref.where('idexpediente', '==', id )).valueChanges();
-    
+    return this.db.collection('/casos', ref => ref.where('idexpediente', '==', id )).valueChanges();    
+  }
+
+  consultaDatos(idaux: string): Observable<any>{
+    //console.log(idaux);
+    return this.db.collection('/casos', ref => ref.where('idaux', '==', idaux)).valueChanges();
   }
 }

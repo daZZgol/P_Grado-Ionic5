@@ -5,4 +5,6 @@ export interface CasoI {
     apellidos: string;
     nombres: string;
     idexpediente: string;
+    ci: string;
+    idaux: string;
 }

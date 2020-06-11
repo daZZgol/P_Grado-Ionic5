@@ -17,6 +17,7 @@ export class ExpedientesPage implements OnInit {
   constructor(private expService:ExpedienteService) { }
 
   ngOnInit() {
-    this.expService.getExpedientes().subscribe(res => this.expedientes = res )
+    this.expService.getExpedientes().subscribe(res => this.expedientes = res)
+    
   }   
 }

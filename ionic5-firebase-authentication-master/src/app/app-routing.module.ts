@@ -44,7 +44,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/nuevocaso/nuevocaso.module').then( m => m.NuevocasoPageModule)
   },
   {
-    path: 'caso',
+    path: 'caso/:id',
     loadChildren: () => import('./pages/caso/caso.module').then( m => m.CasoPageModule)
   },
 ];
